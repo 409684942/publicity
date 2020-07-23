@@ -1,0 +1,204 @@
+/*顶部导航动画*/
+.header_animate_fadeInDown{
+	animation: fadeInDown 2s;
+}
+@keyframes fadeInDown{
+	0%{
+		opacity: 0;
+		transform: translate(0,-100%);
+	}
+	100%{
+		opacity: 1;
+		transform: translate(0,0);
+	}
+}
+/*第一屏动画*/
+.screen-1__heading{
+	transition: all 1s;
+}
+.screen-1__subHeading{
+	transition: all 1s;
+}
+.screen-1__heading_animate_init,
+.screen-1__subHeading_animate_init{
+	opacity: 0;
+	transform: translate(0, 50px);
+}
+.screen-1__heading_animate_done,
+.screen-1__subHeading_animate_done{
+	opacity: 1;
+	transform: translate(0, 0);
+}
+/*第二屏动画*/
+.screen-2__heading{
+	transition: all 1s;
+}
+.screen-2__subHeading,
+.screen-2__bgPic-above{
+	transition: all 1s 0.5s;
+}
+.screen-2__bgPic-plane{
+	transition: all 1s 2s;
+}
+.screen-2__heading_animate_init,
+.screen-2__subHeading_animate_init{
+	opacity: 0;
+	transform: translate(0, 50px);
+}
+.screen-2__bgPic-above_animate_init{
+	opacity: 0;
+}
+.screen-2__bgPic-plane_animate_init{
+	transform: translate(0, 305px);
+	opacity: 0;
+	
+}
+.screen-2__heading_animate_done,
+.screen-2__subHeading_animate_done,
+.screen-2__bgPic-above_animate_done{
+	opacity: 1;
+	transform: translate(0, 0);
+}
+.screen-2__bgPic-plane_animate_done{
+	animation: bgPic-plane 1s 2s;
+}
+
+@keyframes bgPic-plane{
+	0%{transform: translate(0, 305px);}
+	20%{transform: translate(0, -30px);}
+	50%{transform: translate(0, 20px);}
+	75%{transform: translate(0, -10px);}
+	100%{transform: translate(0, 0);}
+}
+/*第三屏动画*/
+.screen-3__leftBox,
+.screen-3__heading{
+	transition: all 1s;
+}
+.screen-3__subHeading{
+	transition: all 1s 0.5s;
+}
+.screen-3__itemsBox{
+	transition: all 1s 2s;
+}
+.screen-3__heading_animate_init,
+.screen-3__subHeading_animate_init{
+	opacity: 0;
+	transform: translate(0, 50px);
+}
+.screen-3__itemsBox_animate_init{
+	opacity: 0;
+	transform: translate(0, 120px);
+}
+.screen-3__leftBox_animate_init{
+	transform: scale(0.2);
+	transform-origin: 0 center;
+}
+.screen-3__heading_animate_done,
+.screen-3__subHeading_animate_done{
+	opacity: 1;
+	transform: translate(0, 0);
+}
+.screen-3__leftBox_animate_done{
+	transform: scale(1);
+	transform-origin: 0 center;
+}
+.screen-3__itemsBox_animate_done{
+	animation: itemsBox 1s 2s;
+}
+@keyframes itemsBox{
+	0%{transform: translate(0, 120px);}
+	20%{transform: translate(0, -30px);}
+	50%{transform: translate(0, 20px);}
+	75%{transform: translate(0, -10px);}
+	100%{transform: translate(0, 0);}
+}
+.screen-3__items{
+	animation: bounce 2s 2s infinite;
+}
+@keyframes bounce{
+	0%,100%{transform: scale(1.1);}
+	50%{transform: scale(1);}
+}
+/*第四屏动画*/
+.screen-4__heading,
+.screen-4__items{
+	transition: all 1s;
+}
+.screen-4__subHeading{
+	transition: all 1s 0.5s;
+}
+.screen-4__heading_animate_init,
+.screen-4__subHeading_animate_init{
+	opacity: 0;
+	transform: translate(0, 50px);
+}
+.screen-4__items-1_animate_init,
+.screen-4__items-2_animate_init,
+.screen-4__items-3_animate_init,
+.screen-4__items-4_animate_init{
+	transform: scale(0);
+}
+.screen-4__heading_animate_done,
+.screen-4__subHeading_animate_done{
+	opacity: 1;
+	transform: translate(0, 0);
+}
+.screen-4__items-1_animate_done,
+.screen-4__items-2_animate_done,
+.screen-4__items-3_animate_done,
+.screen-4__items-4_animate_done{
+	transform: scale(1);
+}
+/*第五屏动画*/
+.screen-5__heading,
+.screen-5__img{
+	transition: all 1s;
+}
+.screen-5__subHeading{
+	transition: all 1s 0.5s;
+}
+.screen-5__heading_animate_init,
+.screen-5__subHeading_animate_init{
+	opacity: 0;
+	transform: translate(0, 50px);
+}
+.screen-5__img_animate_init{
+	opacity: 0;
+	transform: scale(0.3);
+	transform-origin: center 0;
+}
+.screen-5__heading_animate_done,
+.screen-5__subHeading_animate_done{
+	opacity: 1;
+	transform: translate(0, 0);
+}
+.screen-5__img_animate_done{
+	transform: scale(1);
+	transform-origin: center 0;
+}
+/*导航条区域*/
+.header{
+	transition: all 1s;
+}
+.header_status_back{
+	background: rgba(255,255,255,.5);
+	z-index: 3;
+}
+.header_status_back .header__logo,
+.header_status_back .header__nav-item{
+	color: #000;
+}
+.header_status_back .header__nav-item:last-child{
+	color: #fff;
+}
+/*固定导航栏*/
+.outline{
+	opacity: 0;
+	transition: all 1s;
+	transform: translate(100%,0);
+}
+.outline_status_in{
+	opacity: 1;
+	transform: translate(0,0);
+}
